@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5 import uic
@@ -17,8 +19,9 @@ class MyApp(QMainWindow):
     def CalculateTax(self):
         price = int(self.ui.price_box.toPlainText())
         tax = (self.ui.tax_rate.value())
-        total_price = price  + ((tax / 100) * price)
-        total_price_string = "The total price with tax is: " + str(total_price)
+        total_price = price  + ((tax / 100.0) * price)
+        total_price_string = "Tax is: " + str(tax)+\
+   		" The total price with tax is: " + str(total_price)
         self.ui.results_window.setText(total_price_string)
         
 if __name__ == "__main__":
