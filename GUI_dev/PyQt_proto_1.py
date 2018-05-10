@@ -19,10 +19,10 @@ class MyApp(QtWidgets.QTabWidget):
 	#FILE TAB
 	self.ui.New_case.clicked.connect(self.NameDialog)
 	self.ui.Exit.clicked.connect(self.closeEvent)
-	# MESH TAB	
-	self.ui.widget_from_file.hide()
-	self.ui.widget_userdefined.hide()
-	self.ui.sel_mesh_source.currentIndexChanged.connect(self.SelectionMesh)
+	# MESH TAB
+	#Vertices definition:
+	
+	VertexAdd=self.ui.Add_vert.clicked.connect(self.AddVertex)
 	# BOUND COND TAB
 	self.ui.widget_patch.hide()
 	self.ui.widget_wall.hide()
@@ -52,16 +52,14 @@ class MyApp(QtWidgets.QTabWidget):
 
     def closeEvent(self, event):
     	print "Closing"
-    	self.deleteLater() 
-  
-    def SelectionMesh (self):
-	i=self.ui.sel_mesh_source.currentText()
-	if i == "From File" :
-		self.ui.widget_userdefined.hide()        	
-		self.ui.widget_from_file.show()
-    	else:
-		self.ui.widget_from_file.hide()        	
-		self.ui.widget_userdefined.show()
+    	self.deleteLater()
+
+    def AddVertex (self):
+	VertAdd=[int(self.ui.lineEdit_35.text()),int(self.ui.lineEdit_36.text()), int(self.ui.lineEdit_37.text())];
+	self.ui.lineEdit_35.clear()
+	self.ui.lineEdit_36.clear()
+	self.ui.lineEdit_37.clear()
+	print VertAdd
 
     def SelectionPatch (self):
 	j=self.ui.patch_type.currentText()
@@ -133,5 +131,6 @@ class MyApp(QtWidgets.QTabWidget):
 if __name__ == "__main__":
 	app = QtWidgets.QApplication(sys.argv)
 	window = MyApp()
+	window.setWindowTitle("OpenFOAM GUI")
 	window.show()
 	sys.exit(app.exec_())
