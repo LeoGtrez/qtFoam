@@ -2,6 +2,7 @@
 
 import sys
 import File_options as fopt
+import Mesh_gen as mesh
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5 import uic, QtWidgets
@@ -17,18 +18,20 @@ class MyApp(QtWidgets.QTabWidget):
         self.ui=Ui_MainWindow()
         self.ui.setupUi(self)
         #FILE TAB
+        global dirname
         self.ui.New_case.clicked.connect(self.NameDialog)
         self.ui.Exit.clicked.connect(self.closeEvent)
         # MESH TAB
         #Vertices definition:
         global VertList,NumVerts
         VertList=[]
-        NumVerts=0
+        NumVerts=[]
         self.ui.Add_vert.clicked.connect(self.AddVertex)
         self.ui.Reset_vert.clicked.connect(self.ResetVertex)
         #Curved edges definition:
         global EdgeType,EdgeVertNum,InterpolPoints
-        self.ui.comboBox_22.currentIndexChanged.connect(self.GetEdgeType)
+        EdgeType=[]
+        #self.ui.comboBox_22.activated.connect(self.GetEdgeType)
         EdgeVertNum=[]
         self.ui.Add_edgevert.clicked.connect(self.AddEdgeVert)
         InterpolPoints=[]
@@ -38,10 +41,10 @@ class MyApp(QtWidgets.QTabWidget):
         self.ui.checkBox_2.stateChanged.connect(self.SimplGrad)
         self.ui.checkBox_3.stateChanged.connect(self.EdgeGrad)
         #Blocks definition:
-        Nblock=self.ui.Nblock_btn.clicked.connect(self.GetNBlock)
         global DataBlock, BlockCounter, gradType
-        DataBlock=[[Nblock] for i in range(23)]
+        DataBlock=[]
         BlockCounter=0
+        gradType=[]
         self.ui.Create_block.clicked.connect(self.CreateBlock)
         self.ui.Reset_block.clicked.connect(self.ResetBlock)
         #Get boundaries:
@@ -51,6 +54,13 @@ class MyApp(QtWidgets.QTabWidget):
         NumBounds=0
         self.ui.Set_bound.clicked.connect(self.SetBoundary)
         self.ui.Reset_bound.clicked.connect(self.ResetBoundary)
+        #Call generation of blockMesh
+        self.ui.Create_mesh.clicked.connect(lambda: mesh.GenerateBlockMesh(VertList,NumVerts,\
+                                                                           EdgeType,EdgeVertNum, \
+                                                                           InterpolPoints, \
+                                                                           DataBlock,gradType, \
+                                                                           VfacesBound,PatchInfo, \
+                                                                           NumBounds,dirname))
         # BOUND COND TAB
         self.ui.widget_patch.hide()
         self.ui.widget_wall.hide()
@@ -73,10 +83,9 @@ class MyApp(QtWidgets.QTabWidget):
         self.ui.residualsbtn.setEnabled(False)
 
     def NameDialog (self):
-       text,ok = QInputDialog.getText(self, 'Case Name', 'Enter name for the new case:')
-       if ok:
-          fopt.NewCase(text)
-          fopt.ShowSuccesDialog()
+        global dirname  
+        dirname=fopt.NewCase()
+        fopt.ShowSuccesDialog(dirname)
 
     def closeEvent(self, event):
         print("Closing")
@@ -99,8 +108,15 @@ class MyApp(QtWidgets.QTabWidget):
         global NumVerts
         NumVerts=0
         print(VertList)
+        self.ui.listWidget_2.clear()
         
-    def GetEdgeType (self):
+    def AddEdgeVert (self):
+        VertEdgeAdd=[int(self.ui.lineEdit_38.text()),int(self.ui.lineEdit_39.text())]
+        EdgeVertNum.append(VertEdgeAdd)
+        self.ui.lineEdit_38.clear()
+        self.ui.lineEdit_39.clear()
+        print(EdgeVertNum)
+        global EdgeType
         j=self.ui.comboBox_22.currentText()
         if j == "Arc":
             EdgeType="arc"
@@ -111,13 +127,6 @@ class MyApp(QtWidgets.QTabWidget):
         else:
             EdgeType="BSpline"
         print(EdgeType)
-        
-    def AddEdgeVert (self):
-        VertEdgeAdd=[int(self.ui.lineEdit_38.text()),int(self.ui.lineEdit_39.text())]
-        EdgeVertNum.append(VertEdgeAdd)
-        self.ui.lineEdit_38.clear()
-        self.ui.lineEdit_39.clear()
-        print(EdgeVertNum)
         
     def AddInterpPoints (self):
         InterpAdd=[int(self.ui.lineEdit_40.text()),int(self.ui.lineEdit_41.text()),int(self.ui.lineEdit_42.text())]
@@ -174,10 +183,6 @@ class MyApp(QtWidgets.QTabWidget):
             self.ui.lineEdit_67.setEnabled(False)
             self.ui.lineEdit_68.setEnabled(False)
             self.ui.checkBox_2.setChecked(True)
-            
-    def GetNBlock (self):
-        Nblock=self.ui.lineEdit_102.text()
-        return Nblock
     
     def CreateBlock (self):
         FacesVerts=[int(self.ui.lineEdit_43.text()),int(self.ui.lineEdit_44.text()) \
@@ -187,11 +192,11 @@ class MyApp(QtWidgets.QTabWidget):
         nNodesAxis=[int(self.ui.lineEdit_51.text()),int(self.ui.lineEdit_52.text()) \
                     ,int(self.ui.lineEdit_53.text())]
         if self.ui.checkBox_2.isChecked() == True:
-            gradType="simpleGrading"
+            gradType.append("simpleGrading")
             gradRatio=[int(self.ui.lineEdit_54.text()),int(self.ui.lineEdit_55.text()) \
                        ,int(self.ui.lineEdit_56.text())]
         elif self.ui.checkBox_3.isChecked() == True:
-            gradType="edgeGrading"
+            gradType.append("edgeGrading")
             gradRatio=[int(self.ui.lineEdit_57.text()),int(self.ui.lineEdit_58.text()) \
                        ,int(self.ui.lineEdit_59.text()),int(self.ui.lineEdit_60.text()) \
                        ,int(self.ui.lineEdit_61.text()),int(self.ui.lineEdit_62.text()) \
@@ -199,7 +204,7 @@ class MyApp(QtWidgets.QTabWidget):
                        ,int(self.ui.lineEdit_65.text()),int(self.ui.lineEdit_66.text()) \
                        ,int(self.ui.lineEdit_67.text()),int(self.ui.lineEdit_68.text())]
         global BlockCounter
-        DataBlock[BlockCounter][:]=FacesVerts+nNodesAxis+gradRatio
+        DataBlock.append(FacesVerts+nNodesAxis+gradRatio)
         BlockCounter=BlockCounter+1
         self.ui.lineEdit_43.clear()
         self.ui.lineEdit_44.clear()
@@ -229,7 +234,7 @@ class MyApp(QtWidgets.QTabWidget):
         self.ui.lineEdit_68.clear()
         print(gradType)
         print(DataBlock[0][:])
-        print(DataBlock[1][:])
+        print(len(DataBlock))
         
     def ResetBlock (self):
         DataBlock=[]
@@ -242,6 +247,7 @@ class MyApp(QtWidgets.QTabWidget):
     def SetBoundary (self):
         VfacesBound.append([int(self.ui.lineEdit_69.text()),int(self.ui.lineEdit_70.text()), \
                             int(self.ui.lineEdit_71.text()),int(self.ui.lineEdit_72.text())])
+        global PatchInfo
         PatchInfo.append(self.ui.lineEdit_73.text())
         PatchInfo.append(self.ui.comboBox_23.currentText())
         self.ui.lineEdit_69.clear()
@@ -261,6 +267,10 @@ class MyApp(QtWidgets.QTabWidget):
         PatchInfo=[]
         print(VfacesBound)
         print(PatchInfo)
+        self.ui.listWidget_2.clear()
+        global NumVerts
+        for i in range(NumVerts):
+            self.ui.listWidget_2.addItem("Vertex #"+str(i+1)+": ["+str(VertList[i][0])+"] ["+str(VertList[i][1])+"] ["+str(VertList[i][2])+"]")
 
     def SelectionPatch (self):
         j=self.ui.patch_type.currentText()
