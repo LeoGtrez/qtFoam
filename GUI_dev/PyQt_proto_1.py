@@ -99,7 +99,7 @@ class MyApp(QtWidgets.QTabWidget):
         self.ui.lineEdit_37.clear()
         global NumVerts
         NumVerts=len(VertList)
-        self.ui.listWidget_2.addItem("Vertex #"+str(NumVerts)+": ["+str(VertAdd[0])+"] ["+str(VertAdd[1])+"] ["+str(VertAdd[2])+"]")
+        self.ui.listWidget_2.addItem("Vertex #"+str(NumVerts-1)+": ["+str(VertAdd[0])+"] ["+str(VertAdd[1])+"] ["+str(VertAdd[2])+"]")
         print(NumVerts)
         print(VertList)
         
@@ -237,7 +237,9 @@ class MyApp(QtWidgets.QTabWidget):
         print(len(DataBlock))
         
     def ResetBlock (self):
+        global DataBlock
         DataBlock=[]
+        global gradType        
         gradType=[]
         global BlockCounter
         BlockCounter=0
@@ -262,9 +264,10 @@ class MyApp(QtWidgets.QTabWidget):
         print(PatchInfo)
         
     def ResetBoundary (self):
-        global VfacesBound,PatchInfo
+        global VfacesBound,PatchInfo,NumBounds
         VfacesBound=[]
         PatchInfo=[]
+        NumBounds=0
         print(VfacesBound)
         print(PatchInfo)
         self.ui.listWidget_2.clear()
