@@ -353,7 +353,7 @@ class MyApp(QtWidgets.QTabWidget):
         
     def ResetBlock (self):
         global DataBlock, gradType
-        DataBlock=[]
+        DataBlock=[]       
         gradType=[]
         global BlockCounter
         BlockCounter=0
