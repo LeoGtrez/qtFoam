@@ -266,7 +266,7 @@ def GenerateSnappyHexMesh (dirname, Steps, CADname, BoxMinPoint, BoxMaxPoint, CM
                 "features":[{"file":eMesh, "level":CMData[5][0]}],\
                 "refinementSurfaces":{name:{"level":[CMData[5][1],CMData[5][2]],"patchInfo":{"type":CMData[5][3],"inGroups":[name+"Group"]}}},\
                 "resolveFeatureAngle":CMData[5][4],\
-                "refinementRegions":{"refinementBox":{"mode":CMData[5][5],"levels":[[CMData[6][0],CMData[6][1]][CMData[6][2],CMData[6][3]]]}},\
+                "refinementRegions":{"refinementBox":{"mode":CMData[5][5],"levels":[[CMData[6][0],CMData[6][1],CMData[6][2],CMData[6][3]]]}},\
                 "locationInMesh":[CMData[7][0],CMData[7][1],CMData[7][2]],\
                 "allowFreeStandingZoneFaces":FreeStanding}
     
