@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
+    <width>817</width>
     <height>565</height>
    </rect>
   </property>
@@ -162,7 +162,7 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>601</width>
+          <width>541</width>
           <height>511</height>
          </rect>
         </property>
@@ -189,7 +189,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>585</width>
+           <width>525</width>
            <height>707</height>
           </rect>
          </property>
@@ -216,9 +216,6 @@
             </item>
             <item row="9" column="3">
              <widget class="QLineEdit" name="lineEdit_43"/>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLineEdit" name="lineEdit_35"/>
             </item>
             <item row="10" column="3">
              <widget class="QLineEdit" name="lineEdit_47"/>
@@ -267,14 +264,14 @@
               </property>
              </widget>
             </item>
-            <item row="21" column="3" colspan="3">
-             <widget class="QLineEdit" name="lineEdit_73"/>
+            <item row="20" column="4">
+             <widget class="QLineEdit" name="lineEdit_70"/>
             </item>
             <item row="11" column="5">
              <widget class="QLineEdit" name="lineEdit_53"/>
             </item>
-            <item row="20" column="4">
-             <widget class="QLineEdit" name="lineEdit_70"/>
+            <item row="21" column="3" colspan="3">
+             <widget class="QLineEdit" name="lineEdit_73"/>
             </item>
             <item row="6" column="5">
              <widget class="QLineEdit" name="lineEdit_42"/>
@@ -291,6 +288,9 @@
                <string>Add</string>
               </property>
              </widget>
+            </item>
+            <item row="11" column="4">
+             <widget class="QLineEdit" name="lineEdit_52"/>
             </item>
             <item row="21" column="1" colspan="2">
              <widget class="QLabel" name="label_76">
@@ -311,8 +311,11 @@
               </property>
              </widget>
             </item>
-            <item row="11" column="4">
-             <widget class="QLineEdit" name="lineEdit_52"/>
+            <item row="11" column="3">
+             <widget class="QLineEdit" name="lineEdit_51"/>
+            </item>
+            <item row="6" column="4">
+             <widget class="QLineEdit" name="lineEdit_41"/>
             </item>
             <item row="4" column="1" colspan="2">
              <widget class="QComboBox" name="comboBox_22">
@@ -338,11 +341,8 @@
               </item>
              </widget>
             </item>
-            <item row="11" column="3">
-             <widget class="QLineEdit" name="lineEdit_51"/>
-            </item>
-            <item row="6" column="4">
-             <widget class="QLineEdit" name="lineEdit_41"/>
+            <item row="20" column="5">
+             <widget class="QLineEdit" name="lineEdit_71"/>
             </item>
             <item row="20" column="1" colspan="2">
              <widget class="QLabel" name="label_73">
@@ -356,8 +356,8 @@
               </property>
              </widget>
             </item>
-            <item row="20" column="5">
-             <widget class="QLineEdit" name="lineEdit_71"/>
+            <item row="20" column="6">
+             <widget class="QLineEdit" name="lineEdit_72"/>
             </item>
             <item row="22" column="1" colspan="2">
              <widget class="QLabel" name="label_75">
@@ -371,14 +371,11 @@
               </property>
              </widget>
             </item>
-            <item row="20" column="6">
-             <widget class="QLineEdit" name="lineEdit_72"/>
+            <item row="10" column="6">
+             <widget class="QLineEdit" name="lineEdit_50"/>
             </item>
             <item row="10" column="5">
              <widget class="QLineEdit" name="lineEdit_49"/>
-            </item>
-            <item row="10" column="6">
-             <widget class="QLineEdit" name="lineEdit_50"/>
             </item>
             <item row="10" column="4">
              <widget class="QLineEdit" name="lineEdit_48"/>
@@ -421,17 +418,8 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="0" colspan="2">
-             <widget class="QLabel" name="label_3">
-              <property name="font">
-               <font>
-                <italic>true</italic>
-               </font>
-              </property>
-              <property name="text">
-               <string>Vertices definition</string>
-              </property>
-             </widget>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="lineEdit_37"/>
             </item>
             <item row="8" column="0" colspan="3">
              <widget class="QLabel" name="label_7">
@@ -444,9 +432,6 @@
                <string>Blocks definition</string>
               </property>
              </widget>
-            </item>
-            <item row="1" column="3">
-             <widget class="QLineEdit" name="lineEdit_37"/>
             </item>
             <item row="2" column="6">
              <widget class="QPushButton" name="Reset_vert">
@@ -642,6 +627,25 @@
               </property>
              </widget>
             </item>
+            <item row="14" column="2">
+             <widget class="QLineEdit" name="lineEdit_57">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="23" column="5" colspan="2">
+             <widget class="QPushButton" name="Preview_bMesh">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>View Mesh</string>
+              </property>
+             </widget>
+            </item>
             <item row="22" column="3" colspan="2">
              <widget class="QComboBox" name="comboBox_23">
               <property name="font">
@@ -674,25 +678,6 @@
                 <string>wedge</string>
                </property>
               </item>
-             </widget>
-            </item>
-            <item row="23" column="5" colspan="2">
-             <widget class="QPushButton" name="Preview_bMesh">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>View Mesh</string>
-              </property>
-             </widget>
-            </item>
-            <item row="14" column="2">
-             <widget class="QLineEdit" name="lineEdit_57">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
              </widget>
             </item>
             <item row="16" column="5">
@@ -733,29 +718,96 @@
               </property>
              </widget>
             </item>
+            <item row="0" column="0" colspan="3">
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <italic>true</italic>
+               </font>
+              </property>
+              <property name="text">
+               <string>Vertices definition</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_35"/>
+            </item>
            </layout>
           </item>
          </layout>
         </widget>
        </widget>
-       <widget class="QListWidget" name="listWidget_2">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>600</x>
+          <x>540</x>
           <y>0</y>
-          <width>171</width>
+          <width>221</width>
           <height>511</height>
          </rect>
         </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="currentRow">
-         <number>-1</number>
-        </property>
+        <layout class="QGridLayout" name="gridLayout_43">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_51">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>true</underline>
+             <strikeout>false</strikeout>
+            </font>
+           </property>
+           <property name="text">
+            <string> Introduction order for vertices:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_50">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/figures/Block.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_52">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string> Base mesh info:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QListWidget" name="listWidget_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="currentRow">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="Snappy_Tab">
@@ -781,8 +833,8 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-487</y>
-           <width>751</width>
+           <y>0</y>
+           <width>643</width>
            <height>1607</height>
           </rect>
          </property>
@@ -1962,7 +2014,7 @@
    <attribute name="title">
     <string>Materials</string>
    </attribute>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>200</x>
@@ -2192,6 +2244,732 @@
     </layout>
    </widget>
   </widget>
+  <widget class="QWidget" name="Field_init_tab">
+   <attribute name="title">
+    <string>Fields initialisation</string>
+   </attribute>
+   <widget class="QFrame" name="Init_p_frame">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>9</y>
+      <width>390</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_53">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pressure p</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_55">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>43</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_26">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>167</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Default</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_27">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>166</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>351</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_194">
+        <property name="text">
+         <string>Pressure value [Pa]</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_25"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_40">
+        <property name="text">
+         <string>Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_43">
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Potential Flow</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Uniform fixed value</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Init_epsilon_frame">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>225</y>
+      <width>260</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_186">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Parameter epsilon</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_190">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_33">
+     <property name="geometry">
+      <rect>
+       <x>169</x>
+       <y>108</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_37">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_200">
+        <property name="text">
+         <string>Parameter epsilon [m²/s³]</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_130"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Init_omega_frame">
+    <property name="geometry">
+     <rect>
+      <x>545</x>
+      <y>225</y>
+      <width>260</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_187">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Parameter omega</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_191">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_38">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_201">
+        <property name="text">
+         <string>Parameter omega [s⁻¹]</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_131"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButton_35">
+     <property name="geometry">
+      <rect>
+       <x>169</x>
+       <y>108</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Init_k_frame">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>225</y>
+      <width>260</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_185">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Parameter k</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_57">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_31">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>108</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_36">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_199">
+        <property name="text">
+         <string>Parameter k [m²/s²]</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_29"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Init_u_frame">
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>10</y>
+      <width>390</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_54">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Velocity U</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_56">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_28">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>167</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Default</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_29">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>167</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>351</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_17">
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="lineEdit_27"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_196">
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_198">
+        <property name="text">
+         <string>z</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_197">
+        <property name="text">
+         <string>y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_195">
+        <property name="text">
+         <string>Velocity value [m/s]</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="lineEdit_28"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_26"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_63">
+        <property name="text">
+         <string>Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="3">
+       <widget class="QComboBox" name="comboBox_44">
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Potential Flow</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Uniform fixed values</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Init_nuTilda_frame">
+    <property name="geometry">
+     <rect>
+      <x>415</x>
+      <y>380</y>
+      <width>390</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_189">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>161</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Parameter nuTilda</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_193">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>351</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_40">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_133"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_203">
+        <property name="text">
+         <string>Parameter nuTilda [m²/s]</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButton_38">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>108</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Init_nut_frame">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>380</y>
+      <width>390</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_188">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Parameter nut</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_192">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>151</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Internal field initialisation:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>351</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_39">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_132"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_202">
+        <property name="text">
+         <string>Parameter nut [m²/s]</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButton_37">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>108</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QWidget" name="Bound_cond">
    <property name="autoFillBackground">
     <bool>true</bool>
@@ -2209,10 +2987,10 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_16">
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QListWidget" name="listWidget"/>
      </item>
-     <item row="3" column="0">
+     <item row="4" column="0">
       <widget class="QListWidget" name="listWidget_3"/>
      </item>
      <item row="0" column="0">
@@ -2227,7 +3005,7 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item row="3" column="0">
       <widget class="QLabel" name="label_13">
        <property name="font">
         <font>
@@ -2239,6 +3017,13 @@
        </property>
        <property name="text">
         <string>Boundary conditions</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_25">
+       <property name="text">
+        <string>Clear List</string>
        </property>
       </widget>
      </item>
@@ -2368,7 +3153,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2411,13 +3196,20 @@
         </item>
         <item row="1" column="0" colspan="2">
          <widget class="QLabel" name="label_22">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
-           <string>Gauge total pressure (Pa)</string>
+           <string>Gauge total pressure [Pa]</string>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_3"/>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -2472,7 +3264,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2515,13 +3307,20 @@
         </item>
         <item row="1" column="0" colspan="2">
          <widget class="QLabel" name="label_26">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
-           <string>Gauge pressure value (Pa)</string>
+           <string>Gauge pressure value [Pa]</string>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -2576,7 +3375,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2665,7 +3464,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2754,7 +3553,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2843,7 +3642,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2932,12 +3731,12 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>50</y>
-         <width>211</width>
+         <width>213</width>
          <height>91</height>
         </rect>
        </property>
@@ -2952,7 +3751,7 @@
         <item row="1" column="0" rowspan="2" colspan="2">
          <widget class="QLabel" name="label_138">
           <property name="text">
-           <string>Value</string>
+           <string>Value [m/s]</string>
           </property>
          </widget>
         </item>
@@ -3058,7 +3857,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3108,7 +3907,7 @@
         <item row="2" column="0" colspan="2">
          <widget class="QLabel" name="label_144">
           <property name="text">
-           <string>Value</string>
+           <string>Value [m/s]</string>
           </property>
          </widget>
         </item>
@@ -3145,7 +3944,7 @@
         <x>317</x>
         <y>227</y>
         <width>231</width>
-        <height>181</height>
+        <height>211</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -3180,7 +3979,7 @@
        <property name="geometry">
         <rect>
          <x>140</x>
-         <y>150</y>
+         <y>180</y>
          <width>85</width>
          <height>27</height>
         </rect>
@@ -3189,88 +3988,109 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>40</y>
+         <y>30</y>
          <width>211</width>
-         <height>108</height>
+         <height>147</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_26">
-        <item row="3" column="5">
+        <item row="4" column="0" colspan="2">
+         <widget class="QLabel" name="label_154">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
          <widget class="QLineEdit" name="lineEdit_118"/>
         </item>
-        <item row="1" column="2">
+        <item row="2" column="2">
          <widget class="QLineEdit" name="lineEdit_11"/>
         </item>
-        <item row="1" column="8">
+        <item row="2" column="8">
          <widget class="QLineEdit" name="lineEdit_13"/>
         </item>
-        <item row="1" column="0" colspan="2">
+        <item row="2" column="0" colspan="2">
          <widget class="QLabel" name="label_150">
           <property name="text">
            <string>x</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="3" colspan="2">
+        <item row="2" column="3" colspan="2">
          <widget class="QLabel" name="label_151">
           <property name="text">
            <string>y</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="5">
+        <item row="2" column="5">
          <widget class="QLineEdit" name="lineEdit_12"/>
         </item>
-        <item row="1" column="6" colspan="2">
+        <item row="2" column="6" colspan="2">
          <widget class="QLabel" name="label_152">
           <property name="text">
            <string>z</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="3" colspan="2">
-         <widget class="QLabel" name="label_155">
-          <property name="text">
-           <string>y</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0" colspan="9">
-         <widget class="QLabel" name="label_153">
-          <property name="text">
-           <string>Value (outlet)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0" colspan="9">
-         <widget class="QLabel" name="label_149">
-          <property name="text">
-           <string>Inlet value (reverse flow)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="8">
-         <widget class="QLineEdit" name="lineEdit_119"/>
-        </item>
-        <item row="3" column="6" colspan="2">
+        <item row="4" column="6" colspan="2">
          <widget class="QLabel" name="label_156">
           <property name="text">
            <string>z</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="2">
+        <item row="4" column="3" colspan="2">
+         <widget class="QLabel" name="label_155">
+          <property name="text">
+           <string>y</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="9">
+         <widget class="QLabel" name="label_153">
+          <property name="text">
+           <string>Value (outlet) [m/s]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="9">
+         <widget class="QLabel" name="label_149">
+          <property name="text">
+           <string>Inlet value (reverse flow) [m/s]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="8">
+         <widget class="QLineEdit" name="lineEdit_119"/>
+        </item>
+        <item row="4" column="2">
          <widget class="QLineEdit" name="lineEdit_117"/>
         </item>
-        <item row="3" column="0" colspan="2">
-         <widget class="QLabel" name="label_154">
+        <item row="0" column="0" colspan="4">
+         <widget class="QLabel" name="label_32">
           <property name="text">
-           <string>x</string>
+           <string>Type</string>
           </property>
+         </widget>
+        </item>
+        <item row="0" column="4" colspan="5">
+         <widget class="QComboBox" name="comboBox_12">
+          <item>
+           <property name="text">
+            <string>Select</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>inletOutlet</string>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>
@@ -3326,7 +4146,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3415,7 +4235,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3504,7 +4324,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3593,7 +4413,7 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3631,8 +4451,11 @@
         </item>
        </layout>
       </widget>
+      <zorder>layoutWidget</zorder>
+      <zorder>label_163</zorder>
+      <zorder>pushButton_14</zorder>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>21</x>
@@ -3700,7 +4523,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>311</x>
@@ -3773,30 +4596,24 @@
        </item>
       </layout>
      </widget>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
      <zorder>label_14</zorder>
      <zorder>line</zorder>
      <zorder>label_15</zorder>
-     <zorder>label_16</zorder>
-     <zorder>comboBox_3</zorder>
-     <zorder>label_17</zorder>
-     <zorder>lineEdit</zorder>
-     <zorder>label_18</zorder>
-     <zorder>comboBox_4</zorder>
-     <zorder>label_19</zorder>
-     <zorder>lineEdit_2</zorder>
      <zorder>P_wall_frame</zorder>
-     <zorder>P_symmetry_frame</zorder>
-     <zorder>P_outlet_frame</zorder>
-     <zorder>P_inlet_frame</zorder>
      <zorder>P_flowinlet_frame</zorder>
      <zorder>P_empty_frame</zorder>
-     <zorder>U_inlet_frame</zorder>
-     <zorder>U_outlet_frame</zorder>
-     <zorder>U_inletoutlet_frame</zorder>
      <zorder>U_outflow_frame</zorder>
      <zorder>U_symmetry_frame</zorder>
      <zorder>U_wall_frame</zorder>
      <zorder>U_empty_frame</zorder>
+     <zorder>P_symmetry_frame</zorder>
+     <zorder>P_outlet_frame</zorder>
+     <zorder>P_inlet_frame</zorder>
+     <zorder>U_inletoutlet_frame</zorder>
+     <zorder>U_inlet_frame</zorder>
+     <zorder>U_outlet_frame</zorder>
     </widget>
     <widget class="QWidget" name="turb_tab">
      <attribute name="title">
@@ -3851,12 +4668,12 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>40</y>
-         <width>161</width>
+         <width>202</width>
          <height>124</height>
         </rect>
        </property>
@@ -3897,12 +4714,17 @@
           </item>
           <item>
            <property name="text">
+            <string>inletOutlet</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>zeroGradient</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>kqrWallFunction</string>
+            <string>kqRWallFunction</string>
            </property>
           </item>
           <item>
@@ -3918,7 +4740,7 @@
            <bool>false</bool>
           </property>
           <property name="text">
-           <string>Value</string>
+           <string>Value [m²/s²]</string>
           </property>
          </widget>
         </item>
@@ -3981,12 +4803,12 @@
         <string>Apply</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>40</y>
-         <width>161</width>
+         <width>220</width>
          <height>124</height>
         </rect>
        </property>
@@ -4027,6 +4849,11 @@
           </item>
           <item>
            <property name="text">
+            <string>inletOutlet</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>zeroGradient</string>
            </property>
           </item>
@@ -4048,7 +4875,7 @@
            <bool>false</bool>
           </property>
           <property name="text">
-           <string>Value</string>
+           <string>Value [m²/s³]</string>
           </property>
          </widget>
         </item>
@@ -4103,7 +4930,7 @@
         <rect>
          <x>10</x>
          <y>40</y>
-         <width>161</width>
+         <width>205</width>
          <height>124</height>
         </rect>
        </property>
@@ -4144,6 +4971,11 @@
           </item>
           <item>
            <property name="text">
+            <string>inletOutlet</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>zeroGradient</string>
            </property>
           </item>
@@ -4165,7 +4997,7 @@
            <bool>false</bool>
           </property>
           <property name="text">
-           <string>Value</string>
+           <string>Value [s⁻¹]</string>
           </property>
          </widget>
         </item>
@@ -4233,7 +5065,7 @@
         <rect>
          <x>10</x>
          <y>40</y>
-         <width>181</width>
+         <width>202</width>
          <height>124</height>
         </rect>
        </property>
@@ -4295,7 +5127,7 @@
            <bool>false</bool>
           </property>
           <property name="text">
-           <string>Value</string>
+           <string>Value [m²/s]</string>
           </property>
          </widget>
         </item>
@@ -4425,7 +5257,7 @@
            <bool>false</bool>
           </property>
           <property name="text">
-           <string>Value</string>
+           <string>Value [m²/s]</string>
           </property>
          </widget>
         </item>
@@ -4651,6 +5483,13 @@
        </property>
       </widget>
      </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="pushButton_30">
+       <property name="text">
+        <string>Default</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
   </widget>
@@ -4793,138 +5632,36 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>60</y>
-      <width>331</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <property name="leftMargin">
-      <number>0</number>
-     </property>
-     <item row="2" column="0" colspan="2">
-      <widget class="QLabel" name="label_35">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>End time</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="3">
-      <widget class="QLabel" name="label_37">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Adjustable time step</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0" colspan="3">
-      <widget class="QLabel" name="label_38">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Max Courant number</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0" colspan="3">
-      <widget class="QLabel" name="label_39">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Max Courant alpha</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="3" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_19"/>
-     </item>
-     <item row="7" column="0" colspan="3">
-      <widget class="QLabel" name="label_40">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Max time step</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="3" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_18"/>
-     </item>
-     <item row="4" column="3" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_17"/>
-     </item>
-     <item row="7" column="3" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_20"/>
-     </item>
-     <item row="3" column="2" colspan="3">
-      <widget class="QLineEdit" name="lineEdit_16"/>
-     </item>
-     <item row="3" column="0" colspan="2">
-      <widget class="QLabel" name="label_36">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Time step (s)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2" colspan="3">
-      <widget class="QLineEdit" name="lineEdit_15"/>
-     </item>
-     <item row="1" column="2" colspan="3">
-      <widget class="QLineEdit" name="lineEdit_14"/>
-     </item>
-     <item row="0" column="2" colspan="3">
-      <widget class="QComboBox" name="comboBox_13"/>
-     </item>
-     <item row="0" column="0" colspan="2">
-      <widget class="QLabel" name="label_34">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Start from</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
       <x>430</x>
-      <y>60</y>
+      <y>40</y>
       <width>331</width>
-      <height>381</height>
+      <height>411</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
      <item row="6" column="2" colspan="3">
-      <widget class="QComboBox" name="comboBox_17"/>
+      <widget class="QComboBox" name="comboBox_17">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>fixed</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>scientific</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>general</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item row="2" column="2" colspan="3">
       <widget class="QLineEdit" name="lineEdit_22"/>
@@ -4942,7 +5679,23 @@
       </widget>
      </item>
      <item row="3" column="2" colspan="3">
-      <widget class="QComboBox" name="comboBox_15"/>
+      <widget class="QComboBox" name="comboBox_15">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ascii</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>binary</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item row="4" column="0" colspan="2">
       <widget class="QLabel" name="label_45">
@@ -4958,21 +5711,6 @@
      </item>
      <item row="4" column="2" colspan="3">
       <widget class="QLineEdit" name="lineEdit_23"/>
-     </item>
-     <item row="5" column="0" colspan="3">
-      <widget class="QLabel" name="label_46">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Write compresion</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="3" colspan="2">
-      <widget class="QComboBox" name="comboBox_16"/>
      </item>
      <item row="7" column="2" colspan="3">
       <widget class="QLineEdit" name="lineEdit_24"/>
@@ -4990,7 +5728,33 @@
       </widget>
      </item>
      <item row="8" column="2" colspan="3">
-      <widget class="QComboBox" name="comboBox_18"/>
+      <widget class="QComboBox" name="comboBox_18">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>raw</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>gnuplot</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>xmgr</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jplot</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item row="8" column="0" colspan="2">
       <widget class="QLabel" name="label_49">
@@ -5012,9 +5776,46 @@
         </font>
        </property>
        <property name="text">
-        <string>Purge write</string>
+        <string>Purge write (transient)</string>
        </property>
       </widget>
+     </item>
+     <item row="0" column="2" colspan="3">
+      <widget class="QComboBox" name="comboBox_14">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>timeStep</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>runTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>adjustableRunTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cpuTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>clockTime</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="3">
+      <widget class="QLineEdit" name="lineEdit_21"/>
      </item>
      <item row="6" column="0" colspan="2">
       <widget class="QLabel" name="label_47">
@@ -5028,12 +5829,6 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2" colspan="3">
-      <widget class="QLineEdit" name="lineEdit_21"/>
-     </item>
-     <item row="0" column="2" colspan="3">
-      <widget class="QComboBox" name="comboBox_14"/>
-     </item>
      <item row="0" column="0" colspan="2">
       <widget class="QLabel" name="label_42">
        <property name="font">
@@ -5044,6 +5839,80 @@
        <property name="text">
         <string>Write control</string>
        </property>
+      </widget>
+     </item>
+     <item row="5" column="2" colspan="3">
+      <widget class="QComboBox" name="comboBox_16">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>uncompressed</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>compressed</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLabel" name="label_46">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Write compresion</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="label_37">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Write interval (s)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="2">
+      <widget class="QLabel" name="label_38">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Run time modifiable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2" colspan="3">
+      <widget class="QComboBox" name="comboBox_20">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>true</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>false</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
@@ -5074,6 +5943,142 @@
      <string>Apply</string>
     </property>
    </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>41</y>
+      <width>331</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="1" colspan="2">
+      <widget class="QComboBox" name="comboBox_13">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>firstTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>startTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>latestTime</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_15"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_35">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>End time (s)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_34">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Start from</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_16"/>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QComboBox" name="comboBox_19">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>endTime</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>writeNow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>noWriteNow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>nextWrite</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_205">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Stop at</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_204">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Start time (s)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_36">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Time step (s)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_14"/>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QWidget" name="Solver">
    <property name="autoFillBackground">
@@ -5101,7 +6106,7 @@
       <x>780</x>
       <y>20</y>
       <width>20</width>
-      <height>261</height>
+      <height>271</height>
      </rect>
     </property>
     <property name="orientation">
@@ -5112,7 +6117,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>270</y>
+      <y>320</y>
       <width>771</width>
       <height>20</height>
      </rect>
@@ -5127,7 +6132,7 @@
       <x>10</x>
       <y>20</y>
       <width>20</width>
-      <height>261</height>
+      <height>311</height>
      </rect>
     </property>
     <property name="orientation">
@@ -5170,9 +6175,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>310</y>
+      <y>360</y>
       <width>20</width>
-      <height>201</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="orientation">
@@ -5183,7 +6188,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>300</y>
+      <y>350</y>
       <width>31</width>
       <height>20</height>
      </rect>
@@ -5196,7 +6201,7 @@
     <property name="geometry">
      <rect>
       <x>62</x>
-      <y>300</y>
+      <y>348</y>
       <width>111</width>
       <height>21</height>
      </rect>
@@ -5228,9 +6233,9 @@
     <property name="geometry">
      <rect>
       <x>780</x>
-      <y>310</y>
+      <y>360</y>
       <width>20</width>
-      <height>201</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="orientation">
@@ -5240,8 +6245,8 @@
    <widget class="Line" name="line_24">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>300</y>
+      <x>179</x>
+      <y>350</y>
       <width>611</width>
       <height>20</height>
      </rect>
@@ -5253,133 +6258,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>30</y>
-      <width>411</width>
-      <height>241</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_6">
-     <item row="0" column="0" colspan="2">
-      <widget class="QLabel" name="label_60">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Solution Algorithm</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QComboBox" name="comboBox_21"/>
-     </item>
-     <item row="1" column="0" colspan="2">
-      <widget class="QLabel" name="label_61">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Residual Control</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_62">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>U</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_30"/>
-     </item>
-     <item row="3" column="1" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_31"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_63">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>P</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="2">
-      <widget class="QLabel" name="label_64">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Relaxation Factors</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_65">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>U</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_32"/>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="label_66">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>P</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_33"/>
-     </item>
-     <item row="7" column="1">
-      <widget class="QPushButton" name="pushButton_23">
-       <property name="text">
-        <string>Default values</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="2">
-      <widget class="QPushButton" name="pushButton_24">
-       <property name="text">
-        <string>Apply</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>221</x>
-      <y>340</y>
+      <x>230</x>
+      <y>370</y>
       <width>364</width>
       <height>131</height>
      </rect>
@@ -5413,18 +6293,6 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QPushButton" name="residualsbtn">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>See Residuals</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
       <widget class="QPushButton" name="runButton">
        <property name="font">
         <font>
@@ -5440,8 +6308,202 @@
      </item>
     </layout>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>113</y>
+      <width>431</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>411</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="4" column="1">
+       <widget class="QLabel" name="label_66">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Factor</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="lineEdit_33">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" rowspan="3">
+       <widget class="QListWidget" name="listWidget_4"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_32">
+        <property name="text">
+         <string>Load parameters</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QCheckBox" name="checkBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>Relaxation Factors</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="lineEdit_30"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_61">
+        <property name="text">
+         <string>Residual control</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_62">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Solver tolerance</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="lineEdit_17"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>40</y>
+      <width>311</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_41">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_60">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Solver application</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBox_21">
+       <item>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>potentialFoam</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>simpleFoam</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_39">
+       <property name="text">
+        <string>Non orthogonal correctors</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="spinBox">
+       <property name="maximum">
+        <number>50</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>280</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_42">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_23">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Default values</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_24">
+       <property name="text">
+        <string>Apply</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource_file.qrc"/>
+ </resources>
  <connections/>
 </ui>

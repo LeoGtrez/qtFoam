@@ -28,6 +28,9 @@ def NewCase ():
         del file["functions"]
         file.writeFile()
         subprocess.call(["mkdir "+dirname[0]+"/0"],shell=True)
+        #Create field dictionaries p and U
+        subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/p "+dirname[0]+"/0"],shell=True)
+        subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/U "+dirname[0]+"/0"],shell=True)
         NewSuccessDialog(dirname[0])
         return dirname[0]
     
@@ -47,10 +50,16 @@ def LoadCase ():
     dlg = QFileDialog()
     dlg.setWindowTitle("Select existing case folder")
     dlg.setFileMode(QFileDialog.Directory)
+    global dirname
+    dirname=[]
     if dlg.exec_():
-        global dirname
         dirname = dlg.selectedFiles()
-    return dirname[0]
+    if dirname == [] or dirname == "text":
+        print("Case not loaded")
+        dirname=[]
+    else:
+        LoadSuccessDialog(dirname[0])
+        return dirname[0]
 
 def LoadSuccessDialog (dirname):
     msg = QMessageBox()

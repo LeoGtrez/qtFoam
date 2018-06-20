@@ -322,7 +322,7 @@ def GenerateSnappyHexMesh (dirname, Steps, CADname, BoxMinPoint, BoxMaxPoint, CM
     os.chdir(dirname)
     
     try:
-        subprocess.run(['snappyHexMesh'], shell=True, check=True)
+        subprocess.run(['gnome-terminal -x sh -c "snappyHexMesh; bash'], shell=True, check=True)
     except:
         snappymesh_exception()
     else:

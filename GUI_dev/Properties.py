@@ -47,6 +47,7 @@ def editMatProperties (dirname, rho, nu):
         lines=list(data)
         idx1=lines.index(' rho             [1 -3 0 0 0 0 0] 1;\n')
         idx2=lines.index(' nu              [0 2 -1 0 0 0 0] 1e-05;\n')
+        print(idx1,idx2)
         lines[idx1]=' rho             [1 -3 0 0 0 0 0] '+str(rho)+";\n"
         lines[idx2]=' nu              [0 2 -1 0 0 0 0] '+str(nu)+";\n"
         mod_data=' '.join(lines)
