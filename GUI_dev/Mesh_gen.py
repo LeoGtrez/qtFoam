@@ -16,7 +16,7 @@ def GenerateBlockMesh (VertList,NumVerts,EdgeType,EdgeVertNum,InterpolPoints,Dat
     file=ParsedParameterFile("blockMeshDict")
    
     #write vertices coordinates:
-    if NumVerts<len(file["vertices"]):
+    if NumVerts < len(file["vertices"]):
         for i in range(NumVerts):
             file["vertices"][i]="("+str(VertList[i][0])+" "+ str(VertList[i][1])+\
             " "+str(VertList[i][2])+")"
@@ -52,16 +52,38 @@ def GenerateBlockMesh (VertList,NumVerts,EdgeType,EdgeVertNum,InterpolPoints,Dat
                 +" "+str(DataBlock[i][19])+" "+str(DataBlock[i][20])+" "+str(DataBlock[i][21]) \
                 +" "+str(DataBlock[i][22])+")")
     #write boundaries definition:
+    k=0
+    vertperBound=[]
+    vertices=[" "]*NumBounds
+    print(vertices)
+    for i in range(NumBounds):
+        if (k+PatchInfo[(i*3)+2]) == len(VfacesBound):
+            vertperBound.append(VfacesBound[k:])
+        else:
+            vertperBound.append(VfacesBound[k:k+PatchInfo[(i*3)+2]])
+            k=k+PatchInfo[(i*3)+2]
+    print(vertperBound)
+        
+    for i in range(NumBounds):
+        for j in range(len(vertperBound[i])):
+            #print(vertperBound[i][j][0])
+            vertices[i]=vertices[i]+"("+str(vertperBound[i][j][0])+\
+            " "+str(vertperBound[i][j][1])+\
+            " "+str(vertperBound[i][j][2])+\
+            " "+str(vertperBound[i][j][3])+")\n            "
+    print(vertices)
+    
     for i in range(len(file["boundary"])):
         del file["boundary"][-1]
-    for i in range(NumBounds):
+    for i in range(NumBounds-1):
         #file["boundary"].append(str(PatchInfo[i][:]))
-        file["boundary"].append(PatchInfo[i*2]+"\n"
+        file["boundary"].append(PatchInfo[i*3]+"\n"
              "    { \n"
-             "      type "+PatchInfo[(i*2)+1]+"; \n"
+             "      type "+PatchInfo[(i*3)+1]+"; \n"
              "      faces \n"
              "      ( \n"
-             "           (" +str(VfacesBound[i][0])+" "+str(VfacesBound[i][1])+" "+str(VfacesBound[i][2])+" "+str(VfacesBound[i][3])+") \n"
+             "           " +vertices[i]+
+             "\n"
              "      ); \n"
              "    }")
    
@@ -73,6 +95,15 @@ def GenerateBlockMesh (VertList,NumVerts,EdgeType,EdgeVertNum,InterpolPoints,Dat
     
     try:
         subprocess.run(['blockMesh'], shell=True, check=True)
+         #Update field dictionaries p and U
+        subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
+                        dirname+"/0/p"],shell=True)
+        subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
+                        dirname+"/0/p"],shell=True)
+        subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
+                        dirname+"/0/U"],shell=True)
+        subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
+                        dirname+"/0/U"],shell=True)
     except:
         blockmesh_exception()
     else:
@@ -322,11 +353,12 @@ def GenerateSnappyHexMesh (dirname, Steps, CADname, BoxMinPoint, BoxMaxPoint, CM
     os.chdir(dirname)
     
     try:
-        subprocess.run(['gnome-terminal -x sh -c "snappyHexMesh; bash'], shell=True, check=True)
+        subprocess.run(['gnome-terminal -x sh -c "snappyHexMesh -overwrite; bash"'], shell=True, check=True)
     except:
         snappymesh_exception()
     else:
-        snappymesh_success()
+        pass
+        #snappymesh_success()
 
 def snappymesh_exception():
     msg = QMessageBox()

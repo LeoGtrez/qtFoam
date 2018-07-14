@@ -20,13 +20,13 @@ def writeSolverApp (dirname,solver,Pot_Init,value):
             del file['SIMPLE']
         except:
             pass
-        file['potentialFlow']={'nNonOrthogonalCorrectors':float(value)}
+        file['potentialFlow']={'nNonOrthogonalCorrectors':int(value)}
         file.writeFile()
     elif solver == "simpleFoam":
         if Pot_Init == "Potential Flow":
             os.chdir(dirname+"/system")
             file=ParsedParameterFile("fvSolution")
-            file['SIMPLE']={'nNonOrthogonalCorrectors':float(value),'consistent':'yes'}
+            file['SIMPLE']={'nNonOrthogonalCorrectors':int(value),'consistent':'yes'}
             file.writeFile()
         else:
             os.chdir(dirname+"/system")
@@ -39,7 +39,7 @@ def writeSolverApp (dirname,solver,Pot_Init,value):
                 del file['solvers']['Phi']
             except:
                 pass
-            file['SIMPLE']={'nNonOrthogonalCorrectors':float(value),'consistent':'yes'}
+            file['SIMPLE']={'nNonOrthogonalCorrectors':int(value),'consistent':'yes'}
             file.writeFile()
             
 def writeResidualsRelax (dirname,params,residuals,relaxFactors):

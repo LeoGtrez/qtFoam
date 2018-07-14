@@ -485,23 +485,30 @@ class MyApp(QtWidgets.QTabWidget):
                             int(self.ui.lineEdit_71.text()),\
                             int(self.ui.lineEdit_72.text())])
         global PatchInfo
-        PatchInfo.append(self.ui.lineEdit_73.text())
-        PatchInfo.append(self.ui.comboBox_23.currentText())
+        
+        if PatchInfo == []:
+            PatchInfo.append(self.ui.lineEdit_73.text())
+            PatchInfo.append(self.ui.comboBox_23.currentText())
+            PatchInfo.append(1)
+        elif PatchInfo[-3] == self.ui.lineEdit_73.text():
+            count=PatchInfo[-1]
+            PatchInfo[-1]=count+1
+        else:
+            PatchInfo.append(self.ui.lineEdit_73.text())
+            PatchInfo.append(self.ui.comboBox_23.currentText())
+            PatchInfo.append(1)
         self.ui.lineEdit_69.clear()
         self.ui.lineEdit_70.clear()
         self.ui.lineEdit_71.clear()
         self.ui.lineEdit_72.clear()
         self.ui.lineEdit_73.clear()
         global NumBounds
-        NumBounds=NumBounds+1
-        if len(PatchInfo) == 2:
-            self.ui.listWidget_2.addItem(" ")
-        self.ui.listWidget_2.addItem("Boundary: '"+PatchInfo[-2]+"'"+"("+\
-                                     str(VfacesBound[-1][-4])+\
-                                     " "+str(VfacesBound[-1][-3])+ \
-                                     " "+str(VfacesBound[-1][-2])+" "+\
-                                     str(VfacesBound[-1][-1])+ \
-                                     ") -> "+PatchInfo[-1])
+        NumBounds=int(len(PatchInfo)/3)
+        if PatchInfo[-1] == 1:
+            self.ui.listWidget_2.addItem("Boundary: '"+PatchInfo[-3]+"' "+str(VfacesBound[-1])+" -> "+PatchInfo[-2])
+        else:
+            self.ui.listWidget_2.addItem("Boundary: '"+PatchInfo[-3]+"' "+str(VfacesBound[-PatchInfo[-1]:])+ \
+                                     " -> "+PatchInfo[-2])
         print(VfacesBound)
         print(PatchInfo)
         
@@ -894,17 +901,16 @@ class MyApp(QtWidgets.QTabWidget):
             if j == 1:
                 prop.editTurb(dirname,"kOmegaSST")
                 self.ui.epsilon_frame.setEnabled(False)
-                self.ui.nut_frame.setEnabled(False)
+                self.ui.nut_frame.setEnabled(True)
                 self.ui.nutilda_frame.setEnabled(False)
                 self.ui.k_frame.setEnabled(True)
                 self.ui.omega_frame.setEnabled(True)
                 self.ui.Init_epsilon_frame.setEnabled(False)
-                self.ui.Init_nut_frame.setEnabled(False)
+                self.ui.Init_nut_frame.setEnabled(True)
                 self.ui.Init_nuTilda_frame.setEnabled(False)
                 self.ui.Init_k_frame.setEnabled(True)
                 self.ui.Init_omega_frame.setEnabled(True)
                 subprocess.run(["rm "+dirname+"/0/epsilon"],shell=True)
-                subprocess.run(["rm "+dirname+"/0/nut"],shell=True)
                 subprocess.run(["rm "+dirname+"/0/nuTilda"],shell=True)
                 subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/k "+\
                                 dirname+"/0"],shell=True)
@@ -918,6 +924,12 @@ class MyApp(QtWidgets.QTabWidget):
                                 dirname+"/0/omega"],shell=True)
                 subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
                                 dirname+"/0/omega"],shell=True)
+                subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/nut "+\
+                                dirname+"/0"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
+                                dirname+"/0/nut"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
+                                dirname+"/0/nut"],shell=True)
             elif j == 2:
                 prop.editTurb(dirname,"SpalartAllmaras")
                 self.ui.epsilon_frame.setEnabled(False)
@@ -948,17 +960,16 @@ class MyApp(QtWidgets.QTabWidget):
             elif j == 3:
                 prop.editTurb(dirname,"realizableKE")
                 self.ui.epsilon_frame.setEnabled(True)
-                self.ui.nut_frame.setEnabled(False)
+                self.ui.nut_frame.setEnabled(True)
                 self.ui.nutilda_frame.setEnabled(False)
                 self.ui.k_frame.setEnabled(True)
                 self.ui.omega_frame.setEnabled(False)
                 self.ui.Init_epsilon_frame.setEnabled(True)
-                self.ui.Init_nut_frame.setEnabled(False)
+                self.ui.Init_nut_frame.setEnabled(True)
                 self.ui.Init_nuTilda_frame.setEnabled(False)
                 self.ui.Init_k_frame.setEnabled(True)
                 self.ui.Init_omega_frame.setEnabled(False)
                 subprocess.run(["rm "+dirname+"/0/omega"],shell=True)
-                subprocess.run(["rm "+dirname+"/0/nut"],shell=True)
                 subprocess.run(["rm "+dirname+"/0/nuTilda"],shell=True)
                 subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/k "\
                                 +dirname+"/0"],shell=True)
@@ -972,20 +983,25 @@ class MyApp(QtWidgets.QTabWidget):
                                 dirname+"/0/epsilon"],shell=True)
                 subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
                                 dirname+"/0/epsilon"],shell=True)
+                subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/nut "+\
+                                dirname+"/0"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
+                                dirname+"/0/nut"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
+                                dirname+"/0/nut"],shell=True)
             elif j == 4:
                 prop.editTurb(dirname,"RNGkEpsilon")
                 self.ui.epsilon_frame.setEnabled(True)
-                self.ui.nut_frame.setEnabled(False)
+                self.ui.nut_frame.setEnabled(True)
                 self.ui.nutilda_frame.setEnabled(False)
                 self.ui.k_frame.setEnabled(True)
                 self.ui.omega_frame.setEnabled(False)
                 self.ui.Init_epsilon_frame.setEnabled(True)
-                self.ui.Init_nut_frame.setEnabled(False)
+                self.ui.Init_nut_frame.setEnabled(True)
                 self.ui.Init_nuTilda_frame.setEnabled(False)
                 self.ui.Init_k_frame.setEnabled(True)
                 self.ui.Init_omega_frame.setEnabled(False)
                 subprocess.run(["rm "+dirname+"/0/omega"],shell=True)
-                subprocess.run(["rm "+dirname+"/0/nut"],shell=True)
                 subprocess.run(["rm "+dirname+"/0/nuTilda"],shell=True)
                 subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/k "+\
                                 dirname+"/0"],shell=True)
@@ -999,20 +1015,25 @@ class MyApp(QtWidgets.QTabWidget):
                                 dirname+"/0/epsilon"],shell=True)
                 subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
                                 dirname+"/0/epsilon"],shell=True)
+                subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/nut "+\
+                                dirname+"/0"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
+                                dirname+"/0/nut"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
+                                dirname+"/0/nut"],shell=True)
             elif j == 5:
                 prop.editTurb(dirname,"LienLeschziner")
                 self.ui.epsilon_frame.setEnabled(True)
-                self.ui.nut_frame.setEnabled(False)
+                self.ui.nut_frame.setEnabled(True)
                 self.ui.nutilda_frame.setEnabled(False)
                 self.ui.k_frame.setEnabled(True)
                 self.ui.omega_frame.setEnabled(False)
                 self.ui.Init_epsilon_frame.setEnabled(True)
-                self.ui.Init_nut_frame.setEnabled(False)
+                self.ui.Init_nut_frame.setEnabled(True)
                 self.ui.Init_nuTilda_frame.setEnabled(False)
                 self.ui.Init_k_frame.setEnabled(True)
                 self.ui.Init_omega_frame.setEnabled(False)
                 subprocess.run(["rm "+dirname+"/0/omega"],shell=True)
-                subprocess.run(["rm "+dirname+"/0/nut"],shell=True)
                 subprocess.run(["rm "+dirname+"/0/nuTilda"],shell=True)
                 subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/k "+\
                                 dirname+"/0"],shell=True)
@@ -1026,6 +1047,12 @@ class MyApp(QtWidgets.QTabWidget):
                                 dirname+"/0/epsilon"],shell=True)
                 subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
                                 dirname+"/0/epsilon"],shell=True)
+                subprocess.run(["cp -f $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily/0/nut "+\
+                                dirname+"/0"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
+                                dirname+"/0/nut"],shell=True)
+                subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
+                                dirname+"/0/nut"],shell=True)
             elif j == 6:
                 prop.editTurb(dirname,"laminar")
                 self.ui.turb_tab.setEnabled(False)
@@ -1123,7 +1150,7 @@ class MyApp(QtWidgets.QTabWidget):
         self.ui.lineEdit_28.setText("0")
         
     def setPFieldInit (self):
-        Pval=float(self.ui.lineEdit_25.text()/rho)
+        Pval=float(self.ui.lineEdit_25.text())/rho
         f_init.writePFieldInit(dirname,Pval)
         
     def setUFieldInit (self):
@@ -1155,7 +1182,6 @@ class MyApp(QtWidgets.QTabWidget):
     def seeBoundaries (self):
         for i in range(0,len(PatchInfo),2):
             self.ui.listWidget.addItem(PatchInfo[i]+"  "+chr(187)+"  "+PatchInfo[i+1])
-        #Update field dictionaries p and U
         subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --fix-types "+\
                         dirname+"/0/p"],shell=True)
         subprocess.run(["pyFoamCreateBoundaryPatches.py --verbose --clear-unused "+\
